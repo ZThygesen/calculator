@@ -32,7 +32,6 @@ function display() {
     screen.textContent = expr;
 
     const prev = previousExpression.firstOperand + ' ' + previousExpression.operator + ' ' + previousExpression.secondOperand;
-    console.log(prev);
     previous.textContent = prev;
 }
 
@@ -126,7 +125,6 @@ function appendOperator(input) {
             return; 
         }
         executeExpression();
-        console.log(expression.firstOperand);
         expression.firstDone = true;
         expression.operator = operator;
         expression.hasOperator = true;
