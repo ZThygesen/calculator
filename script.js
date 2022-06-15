@@ -36,8 +36,7 @@ function display() {
 }
 
 // key functionality; listen for any key presses and handle appropriately
-const keys = document.querySelector('body');
-keys.addEventListener('keydown', (e) => {
+window.addEventListener('keydown', (e) => {
     let input = e.key;
     switch(e.key) {
         case('+'):
@@ -75,6 +74,7 @@ keys.addEventListener('keydown', (e) => {
 buttons.forEach(button => button.addEventListener('click', () => handleClick(button.getAttribute('id'))));
 
 function handleClick(input) {
+    console.log("here");
     // calls correct function depending on if the button was a number, operator, or function
     if (numbers.includes(input)) { appendNumber(input); }
     else if (operators.includes(input)) { appendOperator(input); }
