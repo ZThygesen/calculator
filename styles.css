@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5e6cc;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.calculator {
+    align-items: center;
+    width: 337px;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 50px;
+    gap: 20px;
+    background-color: #d8c3a5;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 100%;
+    overflow-x: auto;
+    word-break: break-all;
+    padding: 10px;
+    min-height: 105px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    background-color: #eae7dc;
+}
+
+.previous {
+    font-size: 20px;
+}
+
+.screen {
+    font-size: 40px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.right {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    border-style: none;
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 20px 20px;
+    background-color: #eae7dc;
+    transition: all 0.2s;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 black;
+}
+
+button:hover {
+    color: #e85a4f;
+}
+
+button:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 black;
+}
+
+button#clear, button#equals, button#back, button#plus, button#minus, button#times, button#divide {
+    color: #e85a4f;
+}
+
+button#clear:hover, button#equals:hover, button#back:hover, button#plus:hover, button#minus:hover, button#times:hover, button#divide:hover {
+    color: #810d05;
+}
+
+#clear, #equals {
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+}
+
+a {
+    color: black;
+}
